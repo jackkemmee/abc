@@ -7,55 +7,59 @@ import {
   Nav,
   Image,
   Card,
-  FormCheck, Alert
+  FormCheck,
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import tee from "../../images/tees-icon.png";
 import teeV from "../../images/tees-v-icon.png";
 import Accordion from "react-bootstrap/Accordion";
+import shirtImg2 from "../../images/j.png";
+import shirtImg3 from "../../images/t-v-w.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./AccordionMenu.css";
-;
+import { faFlagCheckered } from "@fortawesome/free-solid-svg-icons";
 
-  
+import "./AllChangePic.css";
 
-class AcordianMenu extends Component {
-
-  constructor() {
-    super();
-    this.handleShowShirt = this.handleShowShirt.bind(this);
-    this.handleShowShirtV = this.handleShowShirtV.bind(this);
-  }
-
-  
-  state = {
-    showShirt: 0,
-    showShirtV: 1,
-    
-}
-
-handleShowShirt = () => {
-  this.setState({
-      showShirt: this.state.showShirt
+class AllChange extends Component {
+    state = {
+        showShirt: 0,
       
-  })
-  console.log(this.state.showShirt);
+        showPritable: true
+    }
 
-}
+    handleShowShirt = () => {
+        this.setState({
+            showShirt: !this.state.showShirt
+        })
+    }
 
-handleShowShirtV = () => {
-  this.setState({
-    showShirtV:this.state.showShirtV
-  })
-  console.log(this.state.showShirtV);}
+    handleShowShirtV = () => {
+        this.setState({
+            showShirt: !this.state.showShirt
+        })
+    }
 
+    
+  render() {
+    return (
+      <>
+        <Col>
+          <div className=" ">
+          {this.state.showShirt ? 
+                            <img src={shirtImg3} className="shirt"/> :  <img src={shirtImg2} className="shirt" />
+                        }  
+           
+          </div>
+        </Col>
+        <Col className="acor-menu">
+        <Card className="card-text">
+          <Card.Body>
+            <Card.Text className="text-price">300 THB</Card.Text>
+            <Card.Text className="text-approx">Approximately US $10.00</Card.Text>
+          </Card.Body>
+        </Card>
 
-  
-
-
-    render() {
-      return (
-        <Accordion defaultActiveKey="0" className="x-Accordion">
+          <Accordion defaultActiveKey="0" className="x-Accordion">
           <Card>
             <Accordion.Toggle as={Card.Header} eventKey="0">
               Item type
@@ -109,8 +113,10 @@ handleShowShirtV = () => {
             </Accordion.Collapse>
           </Card>
         </Accordion>
-      );
-    }
+        </Col>
+      </>
+    );
   }
+}
 
-  export default AcordianMenu;
+export default AllChange;
