@@ -49,8 +49,7 @@ left: 10em;
   height: 2em;
 }
 
-.shirt { 
-  
+.shirt {   
   position: absolute;
   width: 540px;
   height: 600px;
@@ -58,3 +57,15 @@ left: 10em;
   top: 2em;
  
 }
+
+.x-Accordion  {  
+  
+  margin-right: 15em; 
+  margin-left: 5em;  
+}
+.acor-menu {
+
+  top: 2em;
+}
+
+
