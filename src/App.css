@@ -85,4 +85,35 @@ left: 10em;
   
 }
 
+.graphic-icon {
+  float: left;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  cursor: pointer;
+  width: 100px;
+
+}
+/* .panelbody {
+  padding: 15px;
+} */
+
+.box {
+  float: left;
+  height: 2em;
+  width: 2em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  border: 1px solid black;
+  clear: both;
+  border-radius: 0.25em 0.25em 0.25em 0.25em;
+  
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
 

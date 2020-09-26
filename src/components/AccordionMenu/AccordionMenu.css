@@ -1,0 +1,79 @@
+    
+    .row-menu {
+      margin-top: 0.5em;
+      border-bottom: 0.01em solid lightgrey;
+    }
+    
+    .logo {
+      padding-left: 5em;
+      height: 2em;
+    }
+    
+    .shirt {   
+      position: absolute;
+      width: 540px;
+      height: 600px;
+      left: 15em;
+      top: 2em;
+     
+    }
+    
+    .x-Accordion  {  
+      
+      margin-right: 15em; 
+      margin-left: 5em;  
+    }
+    .acor-menu {
+      top: 2em;
+    }
+    
+    .card-text {
+      margin-top: -1em;
+      margin-left: 2em;
+       border: none;
+    }
+    .card-body {
+      padding-top: 0em;
+    }
+    .text-price{
+      margin-top: 0.5em;
+      margin-left: 0.5em;
+      color:black;
+      font-weight: bold;
+      font-size:3em;
+      margin-bottom: 0rem;
+      
+    }
+    
+    .graphic-icon {
+      float: left;
+      margin-left: 1em;
+      margin-bottom: 1em;
+      cursor: pointer;
+      width: 100px;
+    
+    }
+    /* .panelbody {
+      padding: 15px;
+    } */
+    
+    .box {
+      float: left;
+      height: 2em;
+      width: 2em;
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+      border: 1px solid black;
+      clear: both;
+      border-radius: 0.25em 0.25em 0.25em 0.25em;
+      
+    }
+    
+    .black {
+      background-color: black;
+    }
+    
+    .white {
+      background-color: white;
+    }
+    
