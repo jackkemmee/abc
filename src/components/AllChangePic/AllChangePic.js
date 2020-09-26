@@ -21,23 +21,22 @@ import { faFlagCheckered } from "@fortawesome/free-solid-svg-icons";
 import "./AllChangePic.css";
 
 class AllChange extends Component {
+ 
     state = {
         showShirt: 0,
-      
-        showPritable: true
+       
+     
     }
 
     handleShowShirt = () => {
+        
         this.setState({
             showShirt: !this.state.showShirt
         })
+        console.log(this.state.showShirt)
     }
 
-    handleShowShirtV = () => {
-        this.setState({
-            showShirt: !this.state.showShirt
-        })
-    }
+
 
     
   render() {
@@ -46,8 +45,9 @@ class AllChange extends Component {
         <Col>
           <div className=" ">
           {this.state.showShirt ? 
-                            <img src={shirtImg3} className="shirt"/> :  <img src={shirtImg2} className="shirt" />
-                        }  
+                            <img src={shirtImg2} className="shirt"/> :<img src={shirtImg3} className="shirt"/>
+                        } 
+                           
            
           </div>
         </Col>
@@ -67,9 +67,9 @@ class AllChange extends Component {
             <Accordion.Collapse eventKey="0">
               <Card.Body>
                   
-                 <p onClick={this.handleShowShirt}> <img src={tee} className="graphic-icon"   /></p>
+                 <p  onClick={this.handleShowShirt}> <img src={tee} className="graphic-icon"   /></p>
   
-                 <p onClick={this.handleShowShirtV}><img src={teeV} className="graphic-icon"  /></p>
+                 <p onClick={this.handleShowShirt}><img src={teeV} className="graphic-icon"  /></p>
                
               </Card.Body>
             </Accordion.Collapse>
