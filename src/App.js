@@ -1,38 +1,76 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Grid, Nav, Image, Card } from "react-bootstrap";
+import { Container, Row, Col, Grid, Nav, Image, Card, FormCheck } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./images/logo.png";
 import shirtImg2 from "./images/j.png";
 import Accordion from "react-bootstrap/Accordion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./App.css";
+import { faFlagCheckered } from "@fortawesome/free-solid-svg-icons";
+
 
 class AcordianMenu extends Component {
+
+ 
   render() {
+
+
     return (
-      <Accordion defaultActiveKey="0"  className="x-Accordion">
+      <Accordion defaultActiveKey="0" className="x-Accordion">
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="0">
+           <span className="folat-right"> Click me! </span>  
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>Hello! I'm the body
+            <FormCheck>
+              <FormCheck.Input isInvalid type="radio" />
+              <FormCheck.Label>Allow us to contact you?</FormCheck.Label>
+            
+            </FormCheck>
+
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             Click me!
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="0">
-            <Card.Body>Hello! I'm the body</Card.Body>
+            <Card.Body>Hello! I'm another body</Card.Body>
           </Accordion.Collapse>
-        </Card>
-        <Card>
+        </Card> 
+
+             <Card>
           <Accordion.Toggle as={Card.Header} eventKey="1">
             Click me!
           </Accordion.Toggle>
           <Accordion.Collapse eventKey="1">
             <Card.Body>Hello! I'm another body</Card.Body>
           </Accordion.Collapse>
-        </Card>
+        </Card>         
       </Accordion>
+    );
+  }
+}
+
+class CardText extends Component {
+  render() {
+    return (
+      <Card className="card-text">
+        <Card.Body>          
+          <Card.Text className="text-price">300 THB</Card.Text>
+          <Card.Text className="text-approx" >Approximately US $10.00</Card.Text>
+        </Card.Body>
+      </Card>
     );
   }
 }
 
 class MenuSecondaryPointing extends Component {
   render() {
+
+    
     return (
       <div className="Container">
         <Row className="row-menu">
@@ -66,14 +104,12 @@ class MenuSecondaryPointing extends Component {
         </Row>
         <Row>
           <Col>
-            <img
-              src={shirtImg2}
-              className="shirt"
-             
-            />
+            <img src={shirtImg2} className="shirt" />
           </Col>
           <Col className="acor-menu">
-             <AcordianMenu ></AcordianMenu>
+            <CardText></CardText>
+
+            <AcordianMenu></AcordianMenu>
           </Col>
         </Row>
       </div>

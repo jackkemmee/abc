@@ -64,8 +64,21 @@ left: 10em;
   margin-left: 5em;  
 }
 .acor-menu {
-
   top: 2em;
+}
+
+.card-text {
+  margin-left: 2em;
+   border: none;
+}
+
+.text-price{
+  margin-left: 0.5em;
+  color:black;
+  font-weight: bold;
+  font-size:3em;
+  margin-bottom: 0rem;
+  
 }
 
 
