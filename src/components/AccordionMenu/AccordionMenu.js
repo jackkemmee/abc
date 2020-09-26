@@ -7,7 +7,7 @@ import {
   Nav,
   Image,
   Card,
-  FormCheck,
+  FormCheck, Alert
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import tee from "../../images/tees-icon.png";
@@ -38,6 +38,7 @@ handleShowShirt = () => {
       
   })
   console.log(this.state.showShirt);
+
 }
 
 handleShowShirtV = () => {

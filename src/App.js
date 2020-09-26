@@ -33,9 +33,6 @@ class MenuSecondaryPointing extends Component {
         </Row>
         <Row>
           <Col>
-          {this.state.showShirt = 0 ? 
-                            <img src={shirtImg2} alt=""/> : <h1>No Shirt</h1>
-                        }
             <img src={shirtImg2} className="shirt" />
           </Col>
           <Col className="acor-menu">
